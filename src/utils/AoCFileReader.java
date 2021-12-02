@@ -34,6 +34,17 @@ public class AoCFileReader {
   }
 
   @SneakyThrows
+  public static List<String> readStringLineByLine(File f) {
+    val res = new ArrayList<String>();
+    val br = new BufferedReader(new FileReader(f));
+    String line;
+    while ((line = br.readLine()) != null) {
+      res.add(line);
+    }
+    return res;
+  }
+
+  @SneakyThrows
   public static List<Integer> readIntegerLine(File f) {
     val br = new BufferedReader(new FileReader(f));
     val line = br.readLine().split(",");
