@@ -40,7 +40,7 @@ public class DaySolver extends AbstractSolver {
   }
 
   @Data
-  private class SubMarineV1 {
+  private static class SubMarineV1 {
     private int depth = 0;
     private int horizontal = 0;
 
@@ -55,7 +55,7 @@ public class DaySolver extends AbstractSolver {
   }
 
   @Data
-  private class SubMarineV2 {
+  private static class SubMarineV2 {
     private int depth = 0;
     private int horizontal = 0;
     private int aim = 0;
