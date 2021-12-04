@@ -74,6 +74,30 @@ public class AoCFileReader {
   }
 
   @SneakyThrows
+  public static List<List<List<Map.Entry<Integer, Boolean>>>> readBingoBoard(File f) {
+    val br = new BufferedReader(new FileReader(f));
+    br.readLine(); // skip first entry
+    val res = new ArrayList<List<List<Map.Entry<Integer, Boolean>>>>();
+    String line;
+    int boardPosition = -1;
+    while ((line = br.readLine()) != null) {
+      if (line.equals("")) {
+        boardPosition++;
+        res.add(new ArrayList<>());
+        continue;
+      }
+      val boardLine = new ArrayList<Map.Entry<Integer, Boolean>>();
+      val values = line.trim().split("\\s+");
+      for (String value : values) {
+        val entry = new AbstractMap.SimpleEntry<>(Integer.parseInt(value), false);
+        boardLine.add(entry);
+      }
+      res.get(boardPosition).add(boardLine);
+    }
+    return res;
+  }
+
+  @SneakyThrows
   public static String readOneLine(File f) {
     return new BufferedReader(new FileReader(f)).readLine();
   }

@@ -20,8 +20,8 @@ public class DaySolver extends AbstractSolver {
     val input = AoCFileReader.readStringLineByLine(new File(this.inputFile1));
     int inputSizeHalf = input.size() / 2;
     int bits = input.get(0).length();
-    StringBuilder gamma = new StringBuilder();
-    StringBuilder power = new StringBuilder();
+    val gamma = new StringBuilder();
+    val power = new StringBuilder();
     for (int i = 0; i < bits; i++) {
       int valueCnt = 0;
       for (String s : input) {
@@ -65,7 +65,7 @@ public class DaySolver extends AbstractSolver {
     int zeroes = 0;
     int ones = 0;
     for (String s : input) {
-      int pos = Integer.parseInt(String.valueOf(s.toCharArray()[position]));
+      char pos = s.toCharArray()[position];
       if (pos == 1) ones++;
       if (pos == 0) zeroes++;
     }

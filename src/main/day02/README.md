@@ -1,6 +1,6 @@
 See: [DAY 2][1]
 
-**--- Day 1: Dive! ---**
+**--- Day 2: Dive! ---**
 
 Now, you need to figure out how to pilot this thing.
 
