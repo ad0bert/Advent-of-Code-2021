@@ -65,4 +65,4 @@ How many lanternfish would there be after 256 days?
 
 Your puzzle answer was `1640526601595`.
 
-[1]: https://adventofcode.com/2021/day/5
+[1]: https://adventofcode.com/2021/day/6
